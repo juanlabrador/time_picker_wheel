@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:time_picker_wheel/src/translations.dart';
 
 import 'export.dart';
 
@@ -20,7 +21,7 @@ class MinutesPicker extends StatelessWidget {
 
     return IntLabelWheel(
       items: items,
-      label: 'Minutes',
+      label: lang.minutes,
       onChange: (value) {
         timeChangeNotifier.minutes = value;
         context.read<OnChange>().call(timeChangeNotifier.timeOfDay());
